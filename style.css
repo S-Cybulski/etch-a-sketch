@@ -1,0 +1,10 @@
+.gridSquare {
+    background-color: white;
+    border: 1px solid lightgray;
+    width: 30px;
+    height: 30px;
+}
+
+.grid {
+    display: flex;
+}

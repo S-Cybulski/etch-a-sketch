@@ -8,3 +8,34 @@
     max-width: 480px;
     border: 1px solid black;
 }
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-left: 10px;
+}
+
+body {
+    display: flex;
+}
+
+button {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 100px;
+    height: 20px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 0 green;
+    border-style: none;
+    background-color: greenyellow;
+}
+
+button:active {
+    box-shadow: none;
+    transform: translateY(5px);;
+    /* box-shadow: 0 0 1rem grey; */
+}

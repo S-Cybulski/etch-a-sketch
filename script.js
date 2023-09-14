@@ -3,6 +3,7 @@ const grid = document.querySelector('.grid');
 let size = 32;
 let divWidth = (480/size).toString();
 let rainbow = false;
+let shading = false;
 
 function createGrid(){
 
@@ -21,12 +22,18 @@ function createGrid(){
     const gridSquares = Array.from(document.querySelectorAll('.gridSquare'));
 
     gridSquares.forEach(square => {
+        let shade = 256
         square.addEventListener('mouseover', () => {
+
             if (rainbow){
                 let red = ((Math.random() * 255) + 1).toString()
                 let green = ((Math.random() * 255) + 1).toString()
                 let blue = ((Math.random() * 255) + 1).toString()
                 square.style.background = `rgb(${red},${green},${blue})`;
+            }
+            else if(shading){
+                shade -= 25;
+                square.style.background = `rgb(${shade},${shade},${shade})`;
             }
             else{
                 square.style.background = 'black';
@@ -61,6 +68,11 @@ function recreateGrid(){
 
 function rainbowMode(){
     rainbow = !(rainbow);
+    shading = false;
 }
 
+function shadeMode(){
+    shading = !(shading);
+    rainbow = false;
+}
 createGrid();

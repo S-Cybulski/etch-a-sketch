@@ -23,3 +23,9 @@ gridSquares.forEach(square => {
     })
 });
 
+function resetGrid(){
+    gridSquares.forEach(square => {
+        square.style.background = 'white';
+    });
+};
+

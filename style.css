@@ -1,8 +1,10 @@
 .gridSquare {
     background-color: white;
-    outline: 1px solid lightgray;
+    /* outline: 1px solid lightgray; */
 }
 
 .grid {
     display: flex;
+    max-width: 480px;
+    border: 1px solid black;
 }

@@ -5,7 +5,7 @@
 
 .grid {
     display: flex;
-    max-width: 480px;
+    max-width: 960px;
     border: 1px solid black;
 }
 
@@ -18,6 +18,9 @@
 
 body {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px;
 }
 
 button {
@@ -26,12 +29,11 @@ button {
     padding: 20px;
     width: 100px;
     height: 20px;
-    border-radius: 10px;
+    border-radius: 5px;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 5px 0 green;
+    box-shadow: 0 5px 0 gray;
     border-style: none;
-    background-color: greenyellow;
 }
 
 button:active {

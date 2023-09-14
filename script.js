@@ -1,7 +1,9 @@
 const grid = document.querySelector('.grid');
+const rainbowButton = document.querySelector('.rainbow');
+const shadingButton = document.querySelector('.shading');
 
 let size = 32;
-let divWidth = (480/size).toString();
+let divWidth = (960/size).toString();
 let rainbow = false;
 let shading = false;
 
@@ -61,18 +63,32 @@ function recreateGrid(){
     })
     
     size = (window.prompt("Enter Grid Size:"))%100;
-    divWidth = (480/size).toString();
+    divWidth = (960/size).toString();
 
     createGrid();
 }
 
 function rainbowMode(){
     rainbow = !(rainbow);
+    if (rainbow){
+        rainbowButton.style.background = 'lightgreen';
+        shadingButton.style.background = 'lightgray';
+    }
+    else{
+        rainbowButton.style.background = 'lightgray';
+    }
     shading = false;
 }
 
 function shadeMode(){
     shading = !(shading);
+    if (shading){
+        shadingButton.style.background = 'lightgreen';
+        rainbowButton.style.background = 'lightgray';
+    }
+    else{
+        shadingButton.style.background = 'lightgray';
+    }
     rainbow = false;
 }
 createGrid();
